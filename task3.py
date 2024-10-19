@@ -6,3 +6,65 @@
 # 2013
 # MMXIII
 
+n = int(input())
+s = ""
+h = 0
+m = 0
+g = 0
+k = n
+while k // 1000 != 0:
+    s += "M"
+    k = k - 1000
+    print(1)
+
+k = n - (n//1000)*1000
+print(k//500)
+while (k // 500 != 0):
+    s += "D"
+    k = k - 500
+    h += 1
+    print(2)
+
+k = n - (n//1000)*1000 - 100*h
+print(k//100)
+while (k // 100 != 0):
+    s += "C"
+    k = k - 100
+    print(3)
+
+
+k = n - (n//100)*100
+print(k//50)
+while (k // 50 != 0):
+    s += "L"
+    k = k - 50
+    m += 1
+    print(4)
+
+k = n - (n//100)*100 - 10*m
+print(k//50)
+while (k // 10 != 0):
+    s += "X"
+    k = k - 10
+    print(5)
+
+k = n - (n//10)*10
+print(k//10)
+while (k // 5 != 0):
+    s += "V"
+    k = k - 5
+    g+=1
+    print(6)
+
+k = n - (n//10)*10 - g
+while (k // 1 != 0):
+    s += "I"
+    k = k - 1
+    print(7)
+
+print(s)
+
+
+
+
+
