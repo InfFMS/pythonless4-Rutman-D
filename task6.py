@@ -9,3 +9,8 @@
 # Вывод:
 # 5 3
 
+n = int(input())
+m = int(input())
+
+def NM(m,n):
+    while
