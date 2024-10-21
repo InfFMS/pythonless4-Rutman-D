@@ -4,3 +4,12 @@
 # Пользоваться input()[::-1] запрещено!
 # Идея задачи реализовать алгоритм,
 # который будет работать для любого введенного натурального числа.
+n = input()
+
+def luteshigrobina(n):
+    m = ""
+    k = n
+    for i in range(1, len(k)+1):
+        m += n[-i]
+    return m
+print(luteshigrobina(n))
