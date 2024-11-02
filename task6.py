@@ -9,3 +9,23 @@
 # Вывод:
 # 5 3
 
+n = int(input())
+m = int(input())
+
+def nod(n, m):
+    if n == m:
+        return n
+    while n != m:
+        if n > m:
+            n -= m
+        if n < m:
+            m -= n
+    return n
+
+def drob(m, n):
+    i = nod(m, n)
+    m = m / i
+    n = n / i
+    print(m, n)
+drob(n, m)
+

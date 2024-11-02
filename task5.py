@@ -4,12 +4,15 @@
 # Пользоваться input()[::-1] запрещено!
 # Идея задачи реализовать алгоритм,
 # который будет работать для любого введенного натурального числа.
-n = input()
+n = int(input())
 
-def luteshigrobina(n):
-    m = ""
-    k = n
-    for i in range(1, len(k)+1):
-        m += n[-i]
-    return m
-print(luteshigrobina(n))
+
+def revers(n):
+    n2 = 0
+    while n != 0:
+         f = n % 10
+         n = n // 10
+         n2 *= 10
+         n2 += f
+    return(n2)
+print(revers(n))

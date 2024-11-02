@@ -6,4 +6,14 @@
 # 378
 # Вывод:
 # 2*3*3*3*7
+n = int(input())
 
+def prost(n):
+    for i in range(2,int(n**0.5)+1):
+        while n%i==0:
+            print(i)
+            n//=i
+    if n!=1:
+        print(n)
+
+prost(n)
