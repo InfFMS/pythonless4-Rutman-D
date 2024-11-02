@@ -6,14 +6,20 @@
 # 378
 # Вывод:
 # 2*3*3*3*7
+
+
+
+def primes(n, i=2):
+    if n <= 1:
+        return
+    if n % i == 0:
+        print(i)
+        primes(n//i, i)
+    else:
+        primes(n, i+1)
+
+
 n = int(input())
 
-def prost(n):
-    for i in range(2,int(n**0.5)+1):
-        while n%i==0:
-            print(i)
-            n//=i
-    if n!=1:
-        print(n)
+primes(n)
 
-prost(n)
